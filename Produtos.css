@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fefeff;
+  font-family: sans-serif;
+  padding-top: 70px;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #12161C;
+  z-index: 999;
+}
+
+.logo1 { color: #fff; }
+.n1 ul { display: flex; list-style: none; gap: 15px; }
+.n1 li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1em;
+}
+.n1 li a:hover { color: #2EC5FF; }
+
+/* LAYOUT PRINCIPAL */
+.produtos {
+  display: grid;
+  grid-template-columns: 280px 1fr; /* 280px categorias | resto produtos */
+  min-height: calc(100vh - 70px);
+}
+
+/* Sidebar de categorias */
+.q2 {
+  background-color: #121212;
+  padding: 30px 20px;
+  position: sticky;
+  top: 70px;
+  height: calc(100vh - 70px);
+}
+
+.n2 h3 {
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.n2 li { list-style: none; padding: 12px 0; }
+.n2 li a {
+  text-decoration: none;
+  color: #AAB4C0;
+  transition: 0.2s;
+}
+.n2 li a:hover { color: #2EC5FF; padding-left: 5px; }
+
+/* Área dos produtos */
+.q1 {
+  padding: 30px;
+}
+.q1 h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden; /* para a imagem respeitar a borda */
+  border: 1px solid #e9e9e9;
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-info span {
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #089bd5;
+  background: #e6f7fe;
+  align-self: flex-start;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.card-info h3 {
+  font-size: 1.1em;
+  color: #12161C;
+}
+
+.card-info p {
+  font-size: 0.9em;
+  color: #6b7a8a;
+  line-height: 1.4;
+}
+
+.card-info a {
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #0F2238;
+}
+.card-info a:hover {
+  color: #2EC5FF;
+}
